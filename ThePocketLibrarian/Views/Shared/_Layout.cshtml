@@ -10,9 +10,9 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        @*<nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ThePocketLibrarian</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">The Pocket Librarian</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -28,19 +28,45 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav>*@
+        <H1 class="header">The Pocket Librarian</H1>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <h3><li><a class="nav .justify-content-center" href="index.html">Home</a></li></h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3><li><a class="nav .justify-content-center" href="findyournextread.html">Find Your Next Read</a></li></h3>
+                </div>
+                <div class="col-sm-4">
+                    <h3><li><a class="nav .justify-content-center" href="about.html">About</a></li></h3>
+                </div>
+            </div>
+        </div>
+        @*<div class="container">
+            <div class="row">
+                <div class="span4"></div>
+                <div class="span4">
+                    <a href="findyournextread.html">
+                        <img class="center-block" src="../../FindBooks.jpg" />
+                </div>
+                </a>
+                <div class="span4"></div>
+            </div>
+        </div>*@
     </header>
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
-
-    <footer class="border-top footer text-muted">
+    @*<footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - ThePocketLibrarian - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; <style="text-color: bisque">
+                2023 - The Pocket Librarian -
+            </style>
         </div>
-    </footer>
+    </footer>*@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
