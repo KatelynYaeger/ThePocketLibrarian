@@ -119,3 +119,11 @@ input {
     display: none;
     color: rgb(108, 41, 41)
 }
+
+.table {
+    color: rgb(108, 41, 41);
+    background-color: bisque;
+    position: float center;
+    transform: translate(0px, 50px);
+    margin: 10px auto;
+}

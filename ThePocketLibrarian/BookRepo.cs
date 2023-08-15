@@ -14,9 +14,9 @@ namespace ThePocketLibrarian
             _connection = connection;
         }
 
-        public IEnumerable<Book> GetAllBooks()
+        public IEnumerable<Book> GetTheRightBook()
         {
-            return _connection.Query<Book>("SELECT * FROM BOOKBASE.ATTRIBUTES;");
+            return _connection.Query<Book>("SELECT TITLE, AUTHOR, GENRE, CHARACTERISTICS FROM BOOKBASE.ATTRIBUTES;");
         }
     }
 }

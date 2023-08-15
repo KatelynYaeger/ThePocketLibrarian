@@ -3,7 +3,7 @@ namespace ThePocketLibrarian
 {
 	public interface IBookRepo
 	{
-        IEnumerable<Book> GetAllBooks();
+        IEnumerable<Book> GetTheRightBook();
     }
 }
 
