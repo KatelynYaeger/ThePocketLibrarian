@@ -16,7 +16,7 @@ namespace ThePocketLibrarian
 
         public IEnumerable<Book> GetTheRightBook()
         {
-            return _connection.Query<Book>("SELECT TITLE, AUTHOR, GENRE, CHARACTERISTICS FROM BOOKBASE.ATTRIBUTES;");
+            return _connection.Query<Book>("SELECT TITLE, AUTHOR, GENRE, CHARACTERISTICS FROM BOOKBASE.ATTRIBUTES where Genre = 'science fiction';");
         }
     }
 }

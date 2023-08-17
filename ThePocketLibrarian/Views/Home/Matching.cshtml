@@ -5,9 +5,9 @@
 <body>
 
     <div class="container mt-3">
-        <form id="regForm" method="post" action="/Book/Index2">
+        <form id="regForm" method="post" form action ="/Book/Index">
             <div class="tab">
-                <strong>Genre</strong> <br><br>
+                <strong>Pick The Genre</strong> <br><br>
                 <input type="checkbox" id="genre1" name="genre1" value="Alternate History">
                 <label for="genre1">Alternate History</label><br>
                 <input type="checkbox" id="genre2" name="genre2" value="Apocalyptic">
@@ -37,81 +37,83 @@
                 <input type="checkbox" id="genre14" name="genre14" value="Young Adult">
                 <label for="genre14">Young Adult</label><br><br>
             </div>
-            <div class="tab">
-                <strong>Romance</strong> <br><br>
-                <input type="checkbox" id="romance1" name="romance1" value="Dark/Sunny">
-                <label for="romance1">Dark/Sunny</label><br>
-                <input type="checkbox" id="romance2" name="romance2" value="Enemies to Lovers">
-                <label for="romance2">Enemies to Lovers</label><br>
-                <input type="checkbox" id="romance3" name="romance3" value="Fairytale">
-                <label for="romance3">Fairytale</label><br>
-                <input type="checkbox" id="romance4" name="romance4" value="Fake Relationship">
-                <label for="romance4">Fake Relationship</label><br>
-                <input type="checkbox" id="romance5" name="romance5" value="Forbidden Love">
-                <label for="romance5">Forbidden Love</label><br>
-                <input type="checkbox" id="romance6" name="romance6" value="Friends to Lovers">
-                <label for="romance6">Friends to Lovers</label><br>
-                <input type="checkbox" id="romance7" name="romance7" value="Gothic">
-                <label for="romance7">Gothic</label><br>
-                <input type="checkbox" id="romance8" name="romance8" value="Love Triangle">
-                <label for="romance8">Love Triangle</label><br>
-                <input type="checkbox" id="romance9" name="romance9" value="Royalty/Commoner">
-                <label for="romance9">Royalty/Commoner</label><br>
-                <input type="checkbox" id="romance10" name="romance10" value="Slow Burn">
-                <label for="romance10">Slow Burn</label><br>
-                <input type="checkbox" id="romance11" name="romance11" value="Star Crossed Lovers">
-                <label for="romance11">Star Crossed Lovers</label><br>
-                <input type="checkbox" id="romance12" name="romance12" value="Stuck Together">
-                <label for="romance12">Stuck Together</label><br><br>
-            </div>
-            <div class="tab">
-                <strong>POV</strong> <br><br>
-                <input type="checkbox" id="pov1" name="pov1" value="First Person">
-                <label for="pov1">First Person</label> <br>
-                <input type="checkbox" id="pov2" name="pov2" value="Deep Third Person">
-                <label for="pov2">Deep Third Person</label> <br>
-                <input type="checkbox" id="pov3" name="pov3" value="Omniscient">
-                <label for="pov3">Omniscient</label><br>
-                <input type="checkbox" id="pov2" name="pov2" value="Multiple Points of View">
-                <label for="pov2">Multiple Points of View</label> <br><br>
+            <div class="Characteristics">
+                <div class="tab">
+                    <strong>Pick the Romance</strong> <br><br>
+                    <input type="checkbox" id="romance1" name="romance1" value="Dark/Sunny">
+                    <label for="romance1">Dark/Sunny</label><br>
+                    <input type="checkbox" id="romance2" name="romance2" value="Enemies to Lovers">
+                    <label for="romance2">Enemies to Lovers</label><br>
+                    <input type="checkbox" id="romance3" name="romance3" value="Fairytale">
+                    <label for="romance3">Fairytale</label><br>
+                    <input type="checkbox" id="romance4" name="romance4" value="Fake Relationship">
+                    <label for="romance4">Fake Relationship</label><br>
+                    <input type="checkbox" id="romance5" name="romance5" value="Forbidden Love">
+                    <label for="romance5">Forbidden Love</label><br>
+                    <input type="checkbox" id="romance6" name="romance6" value="Friends to Lovers">
+                    <label for="romance6">Friends to Lovers</label><br>
+                    <input type="checkbox" id="romance7" name="romance7" value="Gothic">
+                    <label for="romance7">Gothic</label><br>
+                    <input type="checkbox" id="romance8" name="romance8" value="Love Triangle">
+                    <label for="romance8">Love Triangle</label><br>
+                    <input type="checkbox" id="romance9" name="romance9" value="Royalty/Commoner">
+                    <label for="romance9">Royalty/Commoner</label><br>
+                    <input type="checkbox" id="romance10" name="romance10" value="Slow Burn">
+                    <label for="romance10">Slow Burn</label><br>
+                    <input type="checkbox" id="romance11" name="romance11" value="Star Crossed Lovers">
+                    <label for="romance11">Star Crossed Lovers</label><br>
+                    <input type="checkbox" id="romance12" name="romance12" value="Stuck Together">
+                    <label for="romance12">Stuck Together</label><br><br>
+                </div>
+                <div class="tab">
+                    <strong>Pick the POV</strong> <br><br>
+                    <input type="checkbox" id="pov1" name="pov1" value="First Person">
+                    <label for="pov1">First Person</label> <br>
+                    <input type="checkbox" id="pov2" name="pov2" value="Deep Third Person">
+                    <label for="pov2">Deep Third Person</label> <br>
+                    <input type="checkbox" id="pov3" name="pov3" value="Omniscient">
+                    <label for="pov3">Omniscient</label><br>
+                    <input type="checkbox" id="pov4" name="pov4" value="Multiple Points of View">
+                    <label for="pov4">Multiple Points of View</label> <br><br>
 
-                <strong>Setting</strong> <br><br>
-                <input type="checkbox" id="pov1" name="pov1" value="Fantasy">
-                <label for="pov1">Fantasy</label><br>
-                <input type="checkbox" id="pov2" name="pov2" value="Real World">
-                <label for="pov2">Real World</label><br>
-                <input type="checkbox" id="pov3" name="pov3" value="Dystopian">
-                <label for="pov3">Dystopian</label><br> <br>
+                    <strong>Pick the Setting</strong> <br><br>
+                    <input type="checkbox" id="setting1" name="setting1" value="Fantasy">
+                    <label for="setting1">Fantasy</label><br>
+                    <input type="checkbox" id="setting2" name="setting2" value="Real World">
+                    <label for="setting2">Real World</label><br>
+                    <input type="checkbox" id="setting3" name="setting3" value="Dystopian">
+                    <label for="setting3">Dystopian</label><br> <br>
 
-                <strong>Protagonist</strong> <br><br>
-                <input type="checkbox" id="protagonist1" name="protagonist1" value="Female Protagonist">
-                <label for="protagonist1">Female Protagonist</label><br>
-                <input type="checkbox" id="protagonist2" name="protagonist2" value="POC Protagonist">
-                <label for="protagonist2">POC Protagonist</label><br><br>
-            </div>
+                    <strong>Pick the Protagonist</strong> <br><br>
+                    <input type="checkbox" id="protagonist1" name="protagonist1" value="Female Protagonist">
+                    <label for="protagonist1">Female Protagonist</label><br>
+                    <input type="checkbox" id="protagonist2" name="protagonist2" value="POC Protagonist">
+                    <label for="protagonist2">POC Protagonist</label><br><br>
+                </div>
 
-            <div class="tab">
-                <strong>Tropes</strong> <br><br>
-                <input type="checkbox" id="tropes1" name="tropes1" value="Amateur Sleuth">
-                <label for="tropes1">Amateur Sleuth</label><br>
-                <input type="checkbox" id="tropes2" name="tropes2" value="Bada** Female Lead">
-                <label for="tropes2">Bada** Female Lead</label><br>
-                <input type="checkbox" id="tropes3" name="tropes3" value="Chosen One">
-                <label for="tropes3">Chosen One</label><br>
-                <input type="checkbox" id="tropes4" name="tropes4" value="Damsel in Distress">
-                <label for="tropes4">Damsel in Distress</label><br>
-                <input type="checkbox" id="tropes5" name="tropes5" value="Found Family">
-                <label for="tropes5">Found Family</label><br>
-                <input type="checkbox" id="tropes6" name="tropes6" value="Quest">
-                <label for="tropes6">Quest</label><br>
-                <input type="checkbox" id="tropes7" name="tropes7" value="Revolution">
-                <label for="tropes7">Revolution</label><br>
-                <input type="checkbox" id="tropes8" name="tropes8" value="Rivals to Friends">
-                <label for="tropes8">Rivals to Friends</label><br>
-                <input type="checkbox" id="tropes9" name="tropes9" value="Secret Identity">
-                <label for="tropes9">Secret Identity</label><br>
-                <input type="checkbox" id="tropes10" name="tropes10" value="Unlikely Hero">
-                <label for="tropes10">Unlikely Hero</label><br><br>
+                <div class="tab">
+                    <strong>Pick the Tropes</strong> <br><br>
+                    <input type="checkbox" id="tropes1" name="tropes1" value="Amateur Sleuth">
+                    <label for="tropes1">Amateur Sleuth</label><br>
+                    <input type="checkbox" id="tropes2" name="tropes2" value="Bada** Female Lead">
+                    <label for="tropes2">Bada** Female Lead</label><br>
+                    <input type="checkbox" id="tropes3" name="tropes3" value="Chosen One">
+                    <label for="tropes3">Chosen One</label><br>
+                    <input type="checkbox" id="tropes4" name="tropes4" value="Damsel in Distress">
+                    <label for="tropes4">Damsel in Distress</label><br>
+                    <input type="checkbox" id="tropes5" name="tropes5" value="Found Family">
+                    <label for="tropes5">Found Family</label><br>
+                    <input type="checkbox" id="tropes6" name="tropes6" value="Quest">
+                    <label for="tropes6">Quest</label><br>
+                    <input type="checkbox" id="tropes7" name="tropes7" value="Revolution">
+                    <label for="tropes7">Revolution</label><br>
+                    <input type="checkbox" id="tropes8" name="tropes8" value="Rivals to Friends">
+                    <label for="tropes8">Rivals to Friends</label><br>
+                    <input type="checkbox" id="tropes9" name="tropes9" value="Secret Identity">
+                    <label for="tropes9">Secret Identity</label><br>
+                    <input type="checkbox" id="tropes10" name="tropes10" value="Unlikely Hero">
+                    <label for="tropes10">Unlikely Hero</label><br><br>
+                </div>
             </div>
 
             <div style="overflow:auto;">
