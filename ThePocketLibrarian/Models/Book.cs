@@ -1,27 +1,30 @@
-﻿using System;
-using System.Reflection.PortableExecutable;
+﻿using Newtonsoft.Json.Linq;
 
 namespace ThePocketLibrarian
 {
-	public class Book
-	{
-		public Book()
-		{
-		}
+    public class Book
+    {
+        public Book()
+        {
+        }
 
-		public int BookID { get; set; }
-		public string Title { get; set; }
-		public string Author { get; set; }
-		public string Genre { get; set; }
-		public string Characteristics { get; set; }
+        public int BookID { get; set; }
+        public string Title { get; set; }
+        public string Author { get; set; }
+        public string Genre { get; set; }
+        public string Characteristics { get; set; }
+        //public string Description { get; set; }
+    }
 
-	}
 }
 
+
+
+
 //Need To:
-	//1. Check which boxes are checked for genres
-	//2. Full text search based on characteristics checked.
-	//3. Return top three books with title, author, genre, and characteristics, and summary.  
+//1. Check which boxes are checked for genres
+//2. Full text search based on characteristics checked.
+//3. Return top three books with title, author, genre, and characteristics, and summary.  
 
 
 //if (Genre.IsSelect = 0)

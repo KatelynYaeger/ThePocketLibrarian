@@ -2,11 +2,12 @@
 using System.Data;
 using System.Data.Common;
 using Dapper;
+using Newtonsoft.Json.Linq;
 
 namespace ThePocketLibrarian
 {
-	public class BookRepo: IBookRepo
-	{
+    public class BookRepo : IBookRepo
+    {
         private readonly IDbConnection _connection;
 
         public BookRepo(IDbConnection connection)
@@ -16,7 +17,7 @@ namespace ThePocketLibrarian
 
         public IEnumerable<Book> GetTheRightBook()
         {
-            return _connection.Query<Book>("SELECT TITLE, AUTHOR, GENRE, CHARACTERISTICS FROM BOOKBASE.ATTRIBUTES where Genre = 'science fiction';");
+            return _connection.Query<Book>("SELECT TITLE, AUTHOR, CHARACTERISTICS FROM BOOKBASE.ATTRIBUTES where Genre = 'science fiction';");
         }
     }
 }

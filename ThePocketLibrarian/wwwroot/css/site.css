@@ -126,3 +126,7 @@ input {
     transform: translate(0px, 50px);
     margin: 10px auto;
 }
+
+.nextreadcaption{
+    color: bisque;
+}
