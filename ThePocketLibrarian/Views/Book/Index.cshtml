@@ -1,24 +1,38 @@
-﻿@model IEnumerable<Book>
+﻿@model ThePocketLibrarian.FormModel
 
-<h2 class="nextreadcaption">YOUR NEXT READ</h2>
+@Html.CheckBoxFor(m => m.IsChecked)
 
-<table class="table">
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Genre</th>
-        <th>Characteristics</th>
-    </tr>
 
-    @foreach (var book in Model)
-    {
+@*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
+{
+    <b>Want Additional Benefit: </b>
+    <br />
+    <span>Tea: </span> @Html.CheckBoxFor(m => m.Tea, true)
+    <span> | Loundry: </span> @Html.CheckBoxFor(m => m.Loundry, false)
+    <span> | Breakfast: </span> @Html.CheckBoxFor(m => m.Breakfast, false)
+}*@*@
+
+@*@model IEnumerable<Book>
+
+    <h2 class="nextreadcaption">YOUR NEXT READ</h2>
+
+    <table class="table">
         <tr>
-            <td>@book.Title</td>
-            <td>@book.Author</td>
-            <td>@book.Genre</td>
-            <td>@book.Characteristics</td>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Genre</th>
+            <th>Characteristics</th>
         </tr>
 
-    }
-</table>
+        @foreach (var book in Model)
+        {
+            <tr>
+                <td>@book.Title</td>
+                <td>@book.Author</td>
+                <td>@book.Genre</td>
+                <td>@book.Characteristics</td>
+            </tr>
+
+        }
+    </table>*@
 

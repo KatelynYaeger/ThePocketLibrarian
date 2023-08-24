@@ -25,10 +25,16 @@ namespace ThePocketLibrarian.Controllers
 
         private readonly SummaryRepo repos;
 
+        [HttpPost]
+
         public IActionResult ViewBook()
         {
+            return Content("{genre1}");
+
             return View();
         }
+
+        
 
         //[HttpPost]
         //public IActionResult GetDetails()
