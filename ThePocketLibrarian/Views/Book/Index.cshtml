@@ -1,20 +1,10 @@
-﻿@model ThePocketLibrarian.FormModel
+﻿@*@model ThePocketLibrarian.FormModel
 
-@Html.CheckBoxFor(m => m.IsChecked)
+@Html.CheckBoxFor(m => m.IsChecked)*@
 
+*@*@@model IEnumerable<Book>
 
-@*@using (Html.BeginForm("Index", "Home", FormMethod.Post))
-{
-    <b>Want Additional Benefit: </b>
-    <br />
-    <span>Tea: </span> @Html.CheckBoxFor(m => m.Tea, true)
-    <span> | Loundry: </span> @Html.CheckBoxFor(m => m.Loundry, false)
-    <span> | Breakfast: </span> @Html.CheckBoxFor(m => m.Breakfast, false)
-}*@*@
-
-@*@model IEnumerable<Book>
-
-    <h2 class="nextreadcaption">YOUR NEXT READ</h2>
+    @*<h2 class="nextreadcaption">YOUR NEXT READ</h2>
 
     <table class="table">
         <tr>

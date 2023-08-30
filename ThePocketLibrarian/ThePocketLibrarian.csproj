@@ -15,9 +15,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Remove="Views\Book\" />
+    <None Remove="Views\Form\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Book\" />
+    <Folder Include="Views\Form\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Picture3.jpg" />

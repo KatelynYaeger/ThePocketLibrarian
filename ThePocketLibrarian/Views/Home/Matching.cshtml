@@ -6,7 +6,7 @@
 
     <div class="container mt-3">
         @*@using (Html.BeginForm("Viewbook", "Book", FormMethod.Post)) ;*@
-            @*<form id="regForm" method="post" form action="/Book/ViewBook">*@
+        @*<form id="regForm" method="post" form action="/Book/ViewBook">*@
         <form id="regForm" asp-action="Index" asp-controller="Form" method="post">
             <div class="tab">
                 <strong>Pick The Genre</strong> <br><br>
@@ -135,9 +135,6 @@
                 <span class="step"></span>
             </div>
         </form>
-
-
-
 
         <script>var currentTab = 0; // Current tab is set to be the first tab (0)
             showTab(currentTab); // Display the current tab
