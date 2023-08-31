@@ -8,9 +8,9 @@ namespace ThePocketLibrarian.Controllers
 {
     public class FormController : Controller
     {
-        public IActionResult FormResults()
+        public IActionResult FormResults(FormModel model)
         {
-            return View();
+            return Content($"You have chosen {model.Genre}");
         }
 
         

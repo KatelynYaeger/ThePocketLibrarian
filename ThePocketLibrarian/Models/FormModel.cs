@@ -7,7 +7,7 @@ namespace ThePocketLibrarian
 
         public string Genre { get; set; }
         public string Attributes { get; set; }
-        public Book IsChecked { get; set; }
+        public bool IsChecked { get; set; }
 
         //    public bool IsChecked { get; set; }
 

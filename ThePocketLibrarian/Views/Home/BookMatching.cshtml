@@ -7,100 +7,98 @@
     <div class="container mt-3">
         @*@using (Html.BeginForm("Viewbook", "Book", FormMethod.Post)) ;*@
         @*<form id="regForm" method="post" form action="/Book/ViewBook">*@
-        <form id="regForm" asp-action="FormResults" asp-controller="Form" method="post">
+        <form id="regForm" asp-action="FormResults" asp-controller="Form" target="result"  method="post">
             <div class="tab">
                 <strong>Pick The Genre</strong> <br><br>
                 <div>
-                    <input type="checkbox" name="genre" value="Alternate History"> Alternate History
-                    <input type="checkbox" name="genre" value="Apocalyptic"> Apocalyptic
-                    <input type="checkbox" name="genre" value="Fairytale"> Fairytale
-                    <input type="checkbox" name="genre" value="Fantasy"> Fantasy
-                    <input type="checkbox" name="genre" value="General Fiction"> General Fiction
-                    <input type="checkbox" name="genre" value="Gothic"> Gothic
-                    <input type="checkbox" name="genre" value="Historical Fiction"> Historical Fiction
-                    <input type="checkbox" name="genre" value="Legal Thriller"> Legal Thriller
-                    <input type="checkbox" name="genre" value="Mystery"> Mystery
-                    <input type="checkbox" name="genre" value="Romance"> Romance
-                    <input type="checkbox" name="genre" value="Science Fiction"> Science Fiction
-                    <input type="checkbox" name="genre" value="Thriller"> Thriller
-                    <input type="checkbox" name="genre" value="Young Adult"> Young Adult
+                    <input type="checkbox" name="Genre" value="Alternate History"> Alternate History
+                    <input type="checkbox" name="Genre" value="Apocalyptic"> Apocalyptic
+                    <input type="checkbox" name="Genre" value="Fairytale"> Fairytale
+                    <input type="checkbox" name="Genre" value="Fantasy"> Fantasy
+                    <input type="checkbox" name="Genre" value="General Fiction"> General Fiction
+                    <input type="checkbox" name="Genre" value="Gothic"> Gothic
+                    <input type="checkbox" name="Genre" value="Historical Fiction"> Historical Fiction
+                    <input type="checkbox" name="Genre" value="Legal Thriller"> Legal Thriller
+                    <input type="checkbox" name="Genre" value="Mystery"> Mystery
+                    <input type="checkbox" name="Genre" value="Romance"> Romance
+                    <input type="checkbox" name="Genre" value="Science Fiction"> Science Fiction
+                    <input type="checkbox" name="Genre" value="Thriller"> Thriller
+                    <input type="checkbox" name="Genre" value="Young Adult"> Young Adult
                 </div>
 
                 <div class="Characteristics">
                     <div class="tab">
                         <strong>Pick the Romance</strong> <br><br>
-                        <input type="checkbox" name="romance" value="Dark/Sunny"> Dark/Sunny
-                        <input type="checkbox" name="romance" value="Enemies to Lovers"> Enemies to Lovers
-                        <input type="checkbox" name="romance" value="Fairytale"> Fairytale
-                        <input type="checkbox" name="romance" value="Fake Relationship"> Fake Relationship
-                        <input type="checkbox" name="romance" value="Forbidden Love"> Forbidden Love
-                        <input type="checkbox" name="romance" value="Friends to Lovers"> Friends to Lovers
-                        <input type="checkbox" name="romance" value="Gothic"> Gothic
-                        <input type="checkbox" name="romance" value="Love Triangle"> Love Triangle
-                        <input type="checkbox" name="romance" value="Royalty/Commoner"> Royalty/Commoner
-                        <input type="checkbox" name="romance" value="Slow Burn"> Slow Burn
-                        <input type="checkbox" name="romance" value="Star Crossed Lovers"> Star Crossed Lovers
-                        <input type="checkbox" name="romance" value="Stuck Together"> Stuck Together
+                        <input type="checkbox" name="Attributes" value="Dark/Sunny"> Dark/Sunny
+                        <input type="checkbox" name="Attributes" value="Enemies to Lovers"> Enemies to Lovers
+                        <input type="checkbox" name="Attributes" value="Fairytale"> Fairytale
+                        <input type="checkbox" name="Attributes" value="Fake Relationship"> Fake Relationship
+                        <input type="checkbox" name="Attributes" value="Forbidden Love"> Forbidden Love
+                        <input type="checkbox" name="Attributes" value="Friends to Lovers"> Friends to Lovers
+                        <input type="checkbox" name="Attributes" value="Gothic"> Gothic
+                        <input type="checkbox" name="Attributes" value="Love Triangle"> Love Triangle
+                        <input type="checkbox" name="Attributes" value="Royalty/Commoner"> Royalty/Commoner
+                        <input type="checkbox" name="Attributes" value="Slow Burn"> Slow Burn
+                        <input type="checkbox" name="Attributes" value="Star Crossed Lovers"> Star Crossed Lovers
+                        <input type="checkbox" name="Attributes" value="Stuck Together"> Stuck Together
                     </div>
                     <div class="tab">
                         <strong>Pick the POV</strong> <br><br>
-                        <input type="checkbox" name="pov" value="First Person"> First Person
-                        <input type="checkbox" name="pov" value="Deep Third Person"> Deep Third Person
-                        <input type="checkbox" name="pov" value="Omniscient"> Omniscient
-                        <input type="checkbox" name="pov" value="Multiple Points of View"> Multiple Points of View
+                        <input type="checkbox" name="Attributes" value="First Person"> First Person
+                        <input type="checkbox" name="Attributes" value="Deep Third Person"> Deep Third Person
+                        <input type="checkbox" name="Attributes" value="Omniscient"> Omniscient
+                        <input type="checkbox" name="Attributes" value="Multiple Points of View"> Multiple Points of View
                         <br><br>
 
                         <strong>Pick the Setting</strong> <br><br>
-                        <input type="checkbox" name="setting" value="Fantasy World"> Fantasy World
-                        <input type="checkbox" name="setting" value="Real World"> Real World
-                        <input type="checkbox" name="setting" value="Dystopian"> Dystopian
+                        <input type="checkbox" name="Attributes" value="Fantasy World"> Fantasy World
+                        <input type="checkbox" name="Attributes" value="Real World"> Real World
+                        <input type="checkbox" name="Attributes" value="Dystopian"> Dystopian
                         <br> <br>
 
                         <strong>Pick the Protagonist</strong> <br><br>
-                        <input type="checkbox" name="protagonist" value="Female Protagonist"> Female Protagonist
-                        <input type="checkbox" name="protagonist" value="POC Protagonist"> POC Protagonist
+                        <input type="checkbox" name="Attributes" value="Female Protagonist"> Female Protagonist
+                        <input type="checkbox" name="Attributes" value="POC Protagonist"> POC Protagonist
                         <br><br>
                     </div>
 
                     <div class="tab">
                         <strong>Pick the Tropes</strong> <br><br>
-                        <input type="checkbox" name="tropes" value="Amateur Sleuth"> Amateur Sleuth
-                        <input type="checkbox" name="tropes" value="Bada** Female Lead"> Bada** Female Lead
-                        <input type="checkbox" name="tropes" value="Chosen One"> Chosen One
-                        <input type="checkbox" name="tropes" value="Damsel in Distress"> Damsel in Distress
-                        <input type="checkbox" name="tropes" value="Found Family"> Found Famnily
-                        <input type="checkbox" name="tropes" value="Quest"> Quest
-                        <input type="checkbox" name="tropes" value="Revolution"> Revolution
-                        <input type="checkbox" name="tropes" value="Rivals to Friends"> Rivals to Friends
-                        <input type="checkbox" name="tropes" value="Secret Identity"> Secret Identity
-                        <input type="checkbox" name="tropes" value="Unlikely Hero"> Unlikely Hero
-                        <input type="checkbox" name="tropes" value="Fantasy Creatures"> Fantasy Creatures
+                        <input type="checkbox" name="Attributes" value="Amateur Sleuth"> Amateur Sleuth
+                        <input type="checkbox" name="Attributes" value="Bada** Female Lead"> Bada** Female Lead
+                        <input type="checkbox" name="Attributes" value="Chosen One"> Chosen One
+                        <input type="checkbox" name="Attributes" value="Damsel in Distress"> Damsel in Distress
+                        <input type="checkbox" name="Attributes" value="Found Family"> Found Famnily
+                        <input type="checkbox" name="Attributes" value="Quest"> Quest
+                        <input type="checkbox" name="Attributes" value="Revolution"> Revolution
+                        <input type="checkbox" name="Attributes" value="Rivals to Friends"> Rivals to Friends
+                        <input type="checkbox" name="Attributes" value="Secret Identity"> Secret Identity
+                        <input type="checkbox" name="Attributes" value="Unlikely Hero"> Unlikely Hero
+                        <input type="checkbox" name="Attributes" value="Fantasy Creatures"> Fantasy Creatures
                         <br><br>
                     </div>
                 </div>
 
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    </div>
+                </div>
+
+                <div style="text-align:center;margin-top:100px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                </div>
+
                 <p><input type="submit" value="Submit"></p>
-        </form>
+</form>
                 <h3>Result:</h3>
                 <iframe name="result" style="height:100px;width:200px;"></iframe>
 
-
-            
-
-            <div style="overflow:auto;">
-                <div style="float:right;">
-                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-                </div>
-            </div>
-
-            <div style="text-align:center;margin-top:100px;">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-            </div>
-        </form>
+        @*</form>*@
 
         <script>var currentTab = 0; // Current tab is set to be the first tab (0)
             showTab(currentTab); // Display the current tab
