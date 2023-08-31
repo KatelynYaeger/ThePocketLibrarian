@@ -1,213 +1,169 @@
 ﻿@{
     ViewData["Title"] = "Find Your Next Read";
+
 }
 
 <body>
 
     <div class="container mt-3">
-        @*@using (Html.BeginForm("Viewbook", "Book", FormMethod.Post)) ;*@
-        @*<form id="regForm" method="post" form action="/Book/ViewBook">*@
-        <form id="regForm" asp-action="Index" asp-controller="Form" method="post">
-            <div class="tab">
-                <strong>Pick The Genre</strong> <br><br>
-                <input type="checkbox" id="genre1" name="genre1" value="Alternate History">
-                <label for="genre1">Alternate History</label><br>
-                <input type="checkbox" id="genre2" name="genre2" value="Apocalyptic">
-                <label for="genre2">Apocalyptic</label><br>
-                <input type="checkbox" id="genre3" name="genre3" value="Childrens">
-                <label for="genre3">Childrens</label><br>
-                <input type="checkbox" id="genre4" name="genre4" value="Fairytale">
-                <label for="genre4">Fairytale</label><br>
-                <input type="checkbox" id="genre5" name="genre5" value="Fantasy">
-                <label for="genre5">Fantasy</label><br>
-                <input type="checkbox" id="genre6" name="genre6" value="General Fiction">
-                <label for="genre6">General Fiction</label><br>
-                <input type="checkbox" id="genre7" name="genre7" value="Gothic">
-                <label for="genre7">Gothic</label><br>
-                <input type="checkbox" id="genre8" name="genre8" value="Historical Fiction">
-                <label for="genre8">Historical Fiction</label><br>
-                <input type="checkbox" id="genre9" name="genre9" value="Legal Thriller">
-                <label for="genre9">Legal Thriller</label><br>
-                <input type="checkbox" id="genre10" name="genre10" value="Mystery">
-                <label for="genre10">Mystery</label><br>
-                <input type="checkbox" id="genre11" name="genre11" value="Romance">
-                <label for="genre11">Romance</label><br>
-                <input type="checkbox" id="genre12" name="genre12" value="Science Fiction">
-                <label for="genre12">Science Fiction</label><br>
-                <input type="checkbox" id="genre13" name="genre13" value="Thriller">
-                <label for="genre13">Thriller</label><br>
-                <input type="checkbox" id="genre14" name="genre14" value="Young Adult">
-                <label for="genre14">Young Adult</label><br><br>
-            </div>
-            <div class="Characteristics">
+            <form id="regForm" method="post" form action="/Form/FormOptions">
                 <div class="tab">
-                    <strong>Pick the Romance</strong> <br><br>
-                    <input type="checkbox" id="romance1" name="romance1" value="Dark/Sunny">
-                    <label for="romance1">Dark/Sunny</label><br>
-                    <input type="checkbox" id="romance2" name="romance2" value="Enemies to Lovers">
-                    <label for="romance2">Enemies to Lovers</label><br>
-                    <input type="checkbox" id="romance3" name="romance3" value="Fairytale">
-                    <label for="romance3">Fairytale</label><br>
-                    <input type="checkbox" id="romance4" name="romance4" value="Fake Relationship">
-                    <label for="romance4">Fake Relationship</label><br>
-                    <input type="checkbox" id="romance5" name="romance5" value="Forbidden Love">
-                    <label for="romance5">Forbidden Love</label><br>
-                    <input type="checkbox" id="romance6" name="romance6" value="Friends to Lovers">
-                    <label for="romance6">Friends to Lovers</label><br>
-                    <input type="checkbox" id="romance7" name="romance7" value="Gothic">
-                    <label for="romance7">Gothic</label><br>
-                    <input type="checkbox" id="romance8" name="romance8" value="Love Triangle">
-                    <label for="romance8">Love Triangle</label><br>
-                    <input type="checkbox" id="romance9" name="romance9" value="Royalty/Commoner">
-                    <label for="romance9">Royalty/Commoner</label><br>
-                    <input type="checkbox" id="romance10" name="romance10" value="Slow Burn">
-                    <label for="romance10">Slow Burn</label><br>
-                    <input type="checkbox" id="romance11" name="romance11" value="Star Crossed Lovers">
-                    <label for="romance11">Star Crossed Lovers</label><br>
-                    <input type="checkbox" id="romance12" name="romance12" value="Stuck Together">
-                    <label for="romance12">Stuck Together</label><br><br>
+                    <strong>Pick The Genre</strong> <br><br>
+                    <input type="checkbox" name="Genre" value="Alternate History"> Alternate History
+                    <input type="checkbox" name="Genre" value="Apocalyptic"> Apocalyptic
+                    <input type="checkbox" name="Genre" value="Childrens"> Fairytale
+                    <input type="checkbox" name="Genre" value="Fairytale"> Fairytale
+                    <input type="checkbox" name="Genre" value="Fantasy"> Fantasy
+                    <input type="checkbox" name="Genre" value="General Fiction"> General Fiction
+                    <input type="checkbox" name="Genre" value="Gothic"> Gothic
+                    <input type="checkbox" name="Genre" value="Historical Fiction"> Historical Fiction
+                    <input type="checkbox" name="Genre" value="Legal Thriller"> Legal Thriller
+                    <input type="checkbox" name="Genre" value="Mystery"> Mystery
+                    <input type="checkbox" name="Genre" value="Romance"> Romance
+                    <input type="checkbox" name="Genre" value="Science Fiction"> Science Fiction
+                    <input type="checkbox" name="Genre" value="Thriller"> Thriller
+                    <input type="checkbox" name="Genre" value="Young Adult"> Young Adult
                 </div>
-                <div class="tab">
-                    <strong>Pick the POV</strong> <br><br>
-                    <input type="checkbox" id="pov1" name="pov1" value="First Person">
-                    <label for="pov1">First Person</label> <br>
-                    <input type="checkbox" id="pov2" name="pov2" value="Deep Third Person">
-                    <label for="pov2">Deep Third Person</label> <br>
-                    <input type="checkbox" id="pov3" name="pov3" value="Omniscient">
-                    <label for="pov3">Omniscient</label><br>
-                    <input type="checkbox" id="pov4" name="pov4" value="Multiple Points of View">
-                    <label for="pov4">Multiple Points of View</label> <br><br>
+                <div class="Characteristics">
+                    <div class="tab">
+                        <strong>Pick the Romance</strong> <br><br>
+                        <input type="checkbox" name="Attributes" value="Dark/Sunny"> Dark/Sunny
+                        <input type="checkbox" name="Attributes" value="Enemies to Lovers"> Enemies to Lovers
+                        <input type="checkbox" name="Attributes" value="Fairytale"> Fairytale
+                        <input type="checkbox" name="Attributes" value="Fake Relationship"> Fake Relationship
+                        <input type="checkbox" name="Attributes" value="Forbidden Love"> Forbidden Love
+                        <input type="checkbox" name="Attributes" value="Friends to Lovers"> Friends to Lovers
+                        <input type="checkbox" name="Attributes" value="Gothic"> Gothic
+                        <input type="checkbox" name="Attributes" value="Love Triangle"> Love Triangle
+                        <input type="checkbox" name="Attributes" value="Royalty/Commoner"> Royalty/Commoner
+                        <input type="checkbox" name="Attributes" value="Slow Burn"> Slow Burn
+                        <input type="checkbox" name="Attributes" value="Star Crossed Lovers"> Star Crossed Lovers
+                        <input type="checkbox" name="Attributes" value="Stuck Together"> Stuck Together<br><br>
+                    </div>
+                    <div class="tab">
+                        <strong>Pick the POV</strong> <br><br>
+                        <input type="checkbox" name="Attributes" value="First Person"> First Person
+                        <input type="checkbox" name="Attributes" value="Deep Third Person"> Deep Third Person
+                        <input type="checkbox" name="Attributes" value="Omniscient"> Omniscient
+                        <input type="checkbox" name="Attributes" value="Multiple Points of View"> Multiple Points of View
+                        <br><br>
 
-                    <strong>Pick the Setting</strong> <br><br>
-                    <input type="checkbox" id="setting1" name="setting1" value="Fantasy">
-                    <label for="setting1">Fantasy World</label><br>
-                    <input type="checkbox" id="setting2" name="setting2" value="Real World">
-                    <label for="setting2">Real World</label><br>
-                    <input type="checkbox" id="setting3" name="setting3" value="Dystopian">
-                    <label for="setting3">Dystopian</label><br> <br>
+                        <strong>Pick the Setting</strong> <br><br>
+                        <input type="checkbox" name="Attributes" value="Fantasy World"> Fantasy World
+                        <input type="checkbox" name="Attributes" value="Real World"> Real World
+                        <input type="checkbox" name="Attributes" value="Dystopian"> Dystopian
+                        <br> <br>
 
-                    <strong>Pick the Protagonist</strong> <br><br>
-                    <input type="checkbox" id="protagonist1" name="protagonist1" value="Female Protagonist">
-                    <label for="protagonist1">Female Protagonist</label><br>
-                    <input type="checkbox" id="protagonist2" name="protagonist2" value="POC Protagonist">
-                    <label for="protagonist2">POC Protagonist</label><br><br>
+                        <strong>Pick the Protagonist</strong> <br><br>
+                        <input type="checkbox" name="Attributes" value="Female Protagonist"> Female Protagonist
+                        <input type="checkbox" name="Attributes" value="POC Protagonist"> POC Protagonist
+                        <br><br>
+                    </div>
+
+                    <div class="tab">
+                        <strong>Pick the Tropes</strong> <br><br>
+                        <input type="checkbox" name="Attributes" value="Amateur Sleuth"> Amateur Sleuth
+                        <input type="checkbox" name="Attributes" value="Bada** Female Lead"> Bada** Female Lead
+                        <input type="checkbox" name="Attributes" value="Chosen One"> Chosen One
+                        <input type="checkbox" name="Attributes" value="Damsel in Distress"> Damsel in Distress
+                        <input type="checkbox" name="Attributes" value="Found Family"> Found Famnily
+                        <input type="checkbox" name="Attributes" value="Quest"> Quest
+                        <input type="checkbox" name="Attributes" value="Revolution"> Revolution
+                        <input type="checkbox" name="Attributes" value="Rivals to Friends"> Rivals to Friends
+                        <input type="checkbox" name="Attributes" value="Secret Identity"> Secret Identity
+                        <input type="checkbox" name="Attributes" value="Unlikely Hero"> Unlikely Hero
+                        <input type="checkbox" name="Attributes" value="Fantasy Creatures"> Fantasy Creatures<br><br>
+                    </div>
                 </div>
 
-                <div class="tab">
-                    <strong>Pick the Tropes</strong> <br><br>
-                    <input type="checkbox" id="tropes1" name="tropes1" value="Amateur Sleuth">
-                    <label for="tropes1">Amateur Sleuth</label><br>
-                    <input type="checkbox" id="tropes2" name="tropes2" value="Bada** Female Lead">
-                    <label for="tropes2">Bada** Female Lead</label><br>
-                    <input type="checkbox" id="tropes3" name="tropes3" value="Chosen One">
-                    <label for="tropes3">Chosen One</label><br>
-                    <input type="checkbox" id="tropes4" name="tropes4" value="Damsel in Distress">
-                    <label for="tropes4">Damsel in Distress</label><br>
-                    <input type="checkbox" id="tropes5" name="tropes5" value="Found Family">
-                    <label for="tropes5">Found Family</label><br>
-                    <input type="checkbox" id="tropes6" name="tropes6" value="Quest">
-                    <label for="tropes6">Quest</label><br>
-                    <input type="checkbox" id="tropes7" name="tropes7" value="Revolution">
-                    <label for="tropes7">Revolution</label><br>
-                    <input type="checkbox" id="tropes8" name="tropes8" value="Rivals to Friends">
-                    <label for="tropes8">Rivals to Friends</label><br>
-                    <input type="checkbox" id="tropes9" name="tropes9" value="Secret Identity">
-                    <label for="tropes9">Secret Identity</label><br>
-                    <input type="checkbox" id="tropes10" name="tropes10" value="Unlikely Hero">
-                    <label for="tropes10">Unlikely Hero</label><br>
-                    <input type="checkbox" id="tropes11" name="tropes11" value="Fantasy Creatures">
-                    <label for="tropes11">Fantasy Creatures</label><br><br>
+
+                <div style="overflow:auto;">
+                    <div style="float:right;">
+                        <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+                        <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                    </div>
                 </div>
-            </div>
 
-
-            <div style="overflow:auto;">
-                <div style="float:right;">
-                    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-                    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+                <div style="text-align:center;margin-top:100px;">
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
+                    <span class="step"></span>
                 </div>
-            </div>
+            </form>
 
-            <div style="text-align:center;margin-top:100px;">
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-                <span class="step"></span>
-            </div>
-        </form>
+            <script>var currentTab = 0; // Current tab is set to be the first tab (0)
+                showTab(currentTab); // Display the current tab
 
-        <script>var currentTab = 0; // Current tab is set to be the first tab (0)
-            showTab(currentTab); // Display the current tab
-
-            function showTab(n) {
-                // This function will display the specified tab of the form...
-                var x = document.getElementsByClassName("tab");
-                x[n].style.display = "block";
-                //... and fix the Previous/Next buttons:
-                if (n == 0) {
-                    document.getElementById("prevBtn").style.display = "none";
-                } else {
-                    document.getElementById("prevBtn").style.display = "inline";
-                }
-                if (n == (x.length - 1)) {
-                    document.getElementById("nextBtn").innerHTML = "Submit";
-                } else {
-                    document.getElementById("nextBtn").innerHTML = "Next";
-                }
-                //... and run a function that will display the correct step indicator:
-                fixStepIndicator(n)
-            }
-
-            function nextPrev(n) {
-                // This function will figure out which tab to display
-                var x = document.getElementsByClassName("tab");
-                // Exit the function if any field in the current tab is invalid:
-                if (n == 1 && !validateForm()) return false;
-                // Hide the current tab:
-                x[currentTab].style.display = "none";
-                // Increase or decrease the current tab by 1:
-                currentTab = currentTab + n;
-                // if you have reached the end of the form...
-                if (currentTab >= x.length) {
-                    // ... the form gets submitted:
-                    document.getElementById("regForm").submit();
-                    return false;
-                }
-                // Otherwise, display the correct tab:
-                showTab(currentTab);
-            }
-
-            function validateForm() {
-                // This function deals with validation of the form fields
-                var x, y, i, valid = true;
-                x = document.getElementsByClassName("tab");
-                y = x[currentTab].getElementsByTagName("input");
-                // A loop that checks every input field in the current tab:
-                for (i = 0; i < y.length; i++) {
-                    // If a field is empty...
-                    if (y[i].value == "") {
-                        // add an "invalid" class to the field:
-                        y[i].className += " invalid";
-                        // and set the current valid status to false
-                        valid = false;
+                function showTab(n) {
+                    // This function will display the specified tab of the form...
+                    var x = document.getElementsByClassName("tab");
+                    x[n].style.display = "block";
+                    //... and fix the Previous/Next buttons:
+                    if (n == 0) {
+                        document.getElementById("prevBtn").style.display = "none";
+                    } else {
+                        document.getElementById("prevBtn").style.display = "inline";
                     }
+                    if (n == (x.length - 1)) {
+                        document.getElementById("nextBtn").innerHTML = "Submit";
+                    } else {
+                        document.getElementById("nextBtn").innerHTML = "Next";
+                    }
+                    //... and run a function that will display the correct step indicator:
+                    fixStepIndicator(n)
                 }
-                // If the valid status is true, mark the step as finished and valid:
-                if (valid) {
-                    document.getElementsByClassName("step")[currentTab].className += " finish";
-                }
-                return valid; // return the valid status
-            }
 
-            function fixStepIndicator(n) {
-                // This function removes the "active" class of all steps...
-                var i, x = document.getElementsByClassName("step");
-                for (i = 0; i < x.length; i++) {
-                    x[i].className = x[i].className.replace(" active", "");
+                function nextPrev(n) {
+                    // This function will figure out which tab to display
+                    var x = document.getElementsByClassName("tab");
+                    // Exit the function if any field in the current tab is invalid:
+                    if (n == 1 && !validateForm()) return false;
+                    // Hide the current tab:
+                    x[currentTab].style.display = "none";
+                    // Increase or decrease the current tab by 1:
+                    currentTab = currentTab + n;
+                    // if you have reached the end of the form...
+                    if (currentTab >= x.length) {
+                        // ... the form gets submitted:
+                        document.getElementById("regForm").submit();
+                        return false;
+                    }
+                    // Otherwise, display the correct tab:
+                    showTab(currentTab);
                 }
-                //... and adds the "active" class on the current step:
-                x[n].className += " active";
-            }</script>
+
+                function validateForm() {
+                    // This function deals with validation of the form fields
+                    var x, y, i, valid = true;
+                    x = document.getElementsByClassName("tab");
+                    y = x[currentTab].getElementsByTagName("input");
+                    // A loop that checks every input field in the current tab:
+                    for (i = 0; i < y.length; i++) {
+                        // If a field is empty...
+                        if (y[i].value == "") {
+                            // add an "invalid" class to the field:
+                            y[i].className += " invalid";
+                            // and set the current valid status to false
+                            valid = false;
+                        }
+                    }
+                    // If the valid status is true, mark the step as finished and valid:
+                    if (valid) {
+                        document.getElementsByClassName("step")[currentTab].className += " finish";
+                    }
+                    return valid; // return the valid status
+                }
+
+                function fixStepIndicator(n) {
+                    // This function removes the "active" class of all steps...
+                    var i, x = document.getElementsByClassName("step");
+                    for (i = 0; i < x.length; i++) {
+                        x[i].className = x[i].className.replace(" active", "");
+                    }
+                    //... and adds the "active" class on the current step:
+                    x[n].className += " active";
+                }</script>
     </div>
     </div>
 

@@ -8,12 +8,12 @@ namespace ThePocketLibrarian.Controllers
 {
     public class FormController : Controller
     {
-        public IActionResult FormResults(FormModel model)
+        [HttpPost]
+        public IActionResult FormOptions(string[] Genre, string[] Attributes)
         {
-            return Content($"You have chosen {model.Genre}");
+            return View();
         }
 
-        
     }
 
 }
