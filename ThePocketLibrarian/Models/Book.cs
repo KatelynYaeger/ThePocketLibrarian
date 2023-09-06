@@ -21,7 +21,7 @@ namespace ThePocketLibrarian
 
 
 //Need To:
-//1. Check which boxes are checked for genres
+//1. Check which boxes are checked for genres - DONE
 //2. Full text search based on characteristics checked.
 //3. Return top three books with title, author, genre, and characteristics, and summary.  
 
