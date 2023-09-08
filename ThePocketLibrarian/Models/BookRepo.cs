@@ -17,12 +17,19 @@ namespace ThePocketLibrarian
 
         public IEnumerable<Book> GetTheRightBook()
         {
-            return _connection.Query<Book>("SELECT TITLE, AUTHOR FROM BOOKBASE.ATTRIBUTES" +
-                " where Genre = @genre1 or Genre = @genre2 or Genre = @genre3 or Genre = @genre4" +
-                " or Genre = @genre5 or Genre = @genre6 or Genre = @genre7 or Genre = @genre8" +
-                " or Genre = @genre9 or Genre = @genre10 or Genre = @genre11 or Genre = @genre12" +
-                " or Genre = @genre13 or Genre = @genre14;");
+            return _connection.Query<Book>("SELECT TITLE, AUTHOR attribString as scores" +
+                "FROM BOOKBASE.ATTRIBUTES where genreString order by scores DESC;");
         }
+
+        // genreString= "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
+        // attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "','" + n) + "')";
+
     }
 }
 
+//Full-Text Search Statement
+//SELECT TITLE, AUTHOR, MATCH(CHARACTERISTICS)
+//AGAINST('Romance1-12' 'POV1-4' 'Setting1-3' 'Protatonist1-2' 'Tropes1-10') 
+//AS SCORES FROM BOOKBASE.ATTRIBUTES
+//WHERE GENRE = "YOUNG ADULT"
+//ORDER BY scores DESC;

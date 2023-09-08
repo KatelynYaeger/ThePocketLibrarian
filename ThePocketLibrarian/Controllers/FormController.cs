@@ -11,26 +11,26 @@ namespace ThePocketLibrarian.Controllers
         [HttpPost]
         public IActionResult FormOptions(string[] Genre, string[] Attributes)
         {
-            //string genre1 = Genre[0];
-            //string genre2 = Genre[1];
-            //string genre3 = Genre[2];
-            //string genre4 = Genre[3];
-            //string genre5 = Genre[4];
-            //string genre6 = Genre[5];
-            //string genre7 = Genre[6];
-            //string genre8 = Genre[7];
-            //string genre9 = Genre[8];
-            //string genre10 = Genre[9];
-            //string genre11 = Genre[10];
-            //string genre12 = Genre[11];
-            //string genre13 = Genre[12];
-            //string genre14 = Genre[13];
-            string instmt = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
+            string genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
+            string attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "','" + n) + "')";
+
             return View();
+        }
+
+        private readonly IBookRepo repo;
+
+        public IActionResult Index()
+        {
+            var books = repo.GetTheRightBook();
+
+            return View(books);
         }
     }
 
 }
+
+
+
 
 
 
