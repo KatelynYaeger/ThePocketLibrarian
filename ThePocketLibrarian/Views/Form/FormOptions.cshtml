@@ -1,3 +1,23 @@
 ﻿@{
     Layout = "_Layout";
 }
+
+@model IEnumerable<Book>
+
+<h2 class="nextreadcaption">YOUR NEXT READ</h2>
+
+<table class="table">
+    <tr>
+        <th>Title</th>
+        <th>Author</th>
+    </tr>
+
+    @foreach (var book in Model)
+    {
+        <tr>
+            <td>@book.Title</td>
+            <td>@book.Author</td>
+        </tr>
+
+    }
+</table>

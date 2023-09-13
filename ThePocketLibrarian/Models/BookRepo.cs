@@ -3,6 +3,7 @@ using System.Data;
 using System.Data.Common;
 using Dapper;
 using Newtonsoft.Json.Linq;
+using Org.BouncyCastle.Asn1.Cms;
 
 namespace ThePocketLibrarian
 {
@@ -15,15 +16,14 @@ namespace ThePocketLibrarian
             _connection = connection;
         }
 
-        public IEnumerable<Book> GetTheRightBook()
+        public IEnumerable<Book> GetTheRightBook(string[] Genre, string[] Attributes)
         {
-            return _connection.Query<Book>("SELECT TITLE, AUTHOR attribString as scores" +
-                "FROM BOOKBASE.ATTRIBUTES where genreString order by scores DESC;");
-        }
+            var attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "' '" + n) + "')";
+            var genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
+            string qry = string.Format("SELECT TITLE, AUTHOR, {0} as scores FROM BOOKBASE.ATTRIBUTES where {1} order by scores DESC limit 5;", attribString, genreString);
 
-        // genreString= "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
-        // attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "','" + n) + "')";
-
+            return _connection.Query<Book>(qry);
+        } 
     }
 }
 

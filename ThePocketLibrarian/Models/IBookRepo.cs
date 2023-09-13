@@ -5,6 +5,6 @@ namespace ThePocketLibrarian
 {
     public interface IBookRepo
     {
-        IEnumerable<Book> GetTheRightBook();   
+        IEnumerable<Book> GetTheRightBook(string[] Genre, string[] Attributes);   
     }
 }

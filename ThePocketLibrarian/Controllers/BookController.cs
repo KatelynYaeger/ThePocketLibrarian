@@ -16,12 +16,12 @@ namespace ThePocketLibrarian.Controllers
             this.repo = repo;
         }
 
-        public IActionResult Index()
-        {
-            var books = repo.GetTheRightBook();
+        //public IActionResult Index()
+        //{
+        //    var books = repo.GetTheRightBook();
 
-            return View(books);
-        }
+        //    return View(books);
+        //}
 
         private readonly SummaryRepo repos;
 
