@@ -10,17 +10,16 @@ namespace ThePocketLibrarian.Models
 		}
         public Items[]? items { get; set; }
 
-        public void GoogleMethod()
-        {
-            foreach (var item in items)
-            {
-                Console.WriteLine($"{item.volumeInfo.title}");
+        //public string GoogleMethod()
+        //{
+        //    var description = "";
 
-                Console.WriteLine($"{item.volumeInfo.description}");
-
-                Console.WriteLine();
-            }
-        }
+        //    foreach (var item in items)
+        //    {
+        //        description = $"{item.volumeInfo.description}";
+        //    }
+        //    return description;
+        //}
     }
 }
 
@@ -31,6 +30,7 @@ public class Items
     }
 
     public VolumeInfo volumeInfo { get; set; }
+
 }
 
 public class VolumeInfo
@@ -41,6 +41,6 @@ public class VolumeInfo
 
     public string description { get; set; }
     public string? title { get; set; }
-    public string authors { get; set; }
+    //public string authors { get; set; }
 
 }

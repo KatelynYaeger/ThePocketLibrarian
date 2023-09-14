@@ -26,10 +26,3 @@ namespace ThePocketLibrarian
         } 
     }
 }
-
-//Full-Text Search Statement
-//SELECT TITLE, AUTHOR, MATCH(CHARACTERISTICS)
-//AGAINST('Romance1-12' 'POV1-4' 'Setting1-3' 'Protatonist1-2' 'Tropes1-10') 
-//AS SCORES FROM BOOKBASE.ATTRIBUTES
-//WHERE GENRE = "YOUNG ADULT"
-//ORDER BY scores DESC;

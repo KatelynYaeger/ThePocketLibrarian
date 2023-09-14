@@ -3,7 +3,7 @@ namespace ThePocketLibrarian.Models
 {
 	public interface ISummaryRepo
 	{
-        public void AnswerMethod();
+        public string GetSummary(string title, string author);
     }
 }
 

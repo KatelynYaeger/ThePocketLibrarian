@@ -5,27 +5,24 @@ using Org.BouncyCastle.Utilities;
 namespace ThePocketLibrarian.Models
 {
 	public class SummaryRepo: ISummaryRepo
-	{ 
-        public void AnswerMethod()
+	{
+        public string GetSummary(string title, string author)
         {
             var client = new HttpClient();
 
-            var title = "";
+            var googleAPIKey = "YourAPIkey";
 
-            var author = "";
-
-            var googleAPIKey = "YourGoogleBooksAPIKey";
-
-            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q={title}intitle+inauthor:{author}&key={googleAPIKey}";
+            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q={title} +inauthor:{author} &key={googleAPIKey}";
 
             var googleResponse = client.GetStringAsync(googleURL).Result;
 
             var googleObject = JObject.Parse(googleResponse);
 
-            Summary _result = googleObject.ToObject(typeof(Summary)) as Summary;
+            Summary result = googleObject.ToObject(typeof(Summary)) as Summary;
 
-            if (_result != null) _result.GoogleMethod();
+            return result.items[0].volumeInfo.description;
         }
+        
     }
 }
 

@@ -20,8 +20,14 @@ namespace ThePocketLibrarian.Controllers
         [HttpPost]
         public IActionResult FormOptions(string[] Genre, string[] Attributes)
         {
-            //repo = new BookRepo(null);
             var results = bookrepo.GetTheRightBook(Genre, Attributes);
+
+            SummaryRepo summaryRepo = new SummaryRepo();
+
+            foreach(var book in results)
+            { 
+                book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+            }
 
             return View(results);
         }
