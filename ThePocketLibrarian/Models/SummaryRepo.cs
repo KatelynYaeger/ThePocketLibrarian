@@ -10,7 +10,7 @@ namespace ThePocketLibrarian.Models
         {
             var client = new HttpClient();
 
-            var googleAPIKey = "YourAPIkey";
+            var googleAPIKey = "googleapikey";
 
             var googleURL = $"https://www.googleapis.com/books/v1/volumes?q={title} +inauthor:{author} &key={googleAPIKey}";
 
@@ -21,8 +21,7 @@ namespace ThePocketLibrarian.Models
             Summary result = googleObject.ToObject(typeof(Summary)) as Summary;
 
             return result.items[0].volumeInfo.description;
-        }
-        
+        } 
     }
 }
 

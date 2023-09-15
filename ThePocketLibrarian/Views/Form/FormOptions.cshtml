@@ -2,24 +2,23 @@
     Layout = "_Layout";
 }
 
-@model IEnumerable<Book>
+    @model IEnumerable<Book>
+    <h2 class="nextreadcaption"> YOUR NEXT READ</h2>
 
-<h2 class="nextreadcaption">YOUR NEXT READ</h2>
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Description</th>
+            </tr>
 
-<table class="table">
-    <tr>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Description</th>
-    </tr>
+            @foreach (var book in Model)
+            {
+                <tr>
+                    <td>@book.Title</td>
+                    <td>@book.Author</td>
+                    <td>@book.Description</td>
+                </tr>
 
-    @foreach (var book in Model)
-    {
-        <tr>
-            <td>@book.Title</td>
-            <td>@book.Author</td>
-            <td>@book.Description</td>
-        </tr>
-
-    }
-</table>
+            }
+        </table>

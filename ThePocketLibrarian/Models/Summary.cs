@@ -9,17 +9,6 @@ namespace ThePocketLibrarian.Models
         {
 		}
         public Items[]? items { get; set; }
-
-        //public string GoogleMethod()
-        //{
-        //    var description = "";
-
-        //    foreach (var item in items)
-        //    {
-        //        description = $"{item.volumeInfo.description}";
-        //    }
-        //    return description;
-        //}
     }
 }
 
@@ -41,6 +30,4 @@ public class VolumeInfo
 
     public string description { get; set; }
     public string? title { get; set; }
-    //public string authors { get; set; }
-
 }

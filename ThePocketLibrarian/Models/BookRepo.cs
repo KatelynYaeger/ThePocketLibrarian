@@ -1,9 +1,6 @@
-﻿using System;
-using System.Data;
-using System.Data.Common;
+﻿using System.Data;
 using Dapper;
 using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Asn1.Cms;
 
 namespace ThePocketLibrarian
 {

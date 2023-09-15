@@ -130,7 +130,7 @@ input {
     margin: 10px auto;
 }
 
-.nextreadcaption{
+.nextreadcaption {
     color: bisque;
-    position: center;
+    transform: translate(36.5%, 50%);
 }
