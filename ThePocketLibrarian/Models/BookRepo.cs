@@ -20,6 +20,24 @@ namespace ThePocketLibrarian
             string qry = string.Format("SELECT TITLE, AUTHOR, {0} as scores FROM BOOKBASE.ATTRIBUTES where {1} order by scores DESC limit 5;", attribString, genreString);
 
             return _connection.Query<Book>(qry);
-        } 
+        }
+
+        public IEnumerable<Book> BookWithoutGenre(string[] Attributes)
+        {
+            var attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "' '" + n) + "')";
+
+            string qry = string.Format("SELECT TITLE, AUTHOR, {0} as scores FROM BOOKBASE.ATTRIBUTES order by scores DESC limit 5;", attribString);
+
+            return _connection.Query<Book>(qry);
+        }
+
+        public IEnumerable<Book> BookWithoutAttrib(string[] Genre)
+        {
+            var genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
+
+            string qry = string.Format("SELECT TITLE, AUTHOR FROM BOOKBASE.ATTRIBUTES where {0} order by author DESC limit 5;", genreString);
+
+            return _connection.Query<Book>(qry);
+        }
     }
 }

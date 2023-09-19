@@ -21,16 +21,43 @@ namespace ThePocketLibrarian.Controllers
         [HttpPost]
         public IActionResult FormOptions(string[] Genre, string[] Attributes)
         {
-            var results = bookrepo.GetTheRightBook(Genre, Attributes);
+            if (Genre.Length != 0 && Genre != null && Attributes.Length != 0 && Attributes != null)
+            {
+                var results = bookrepo.GetTheRightBook(Genre, Attributes);
 
-            SummaryRepo summaryRepo = new SummaryRepo();
+                SummaryRepo summaryRepo = new SummaryRepo();
 
-            foreach(var book in results)
-            { 
-                book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                foreach(var book in results)
+                { 
+                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                }
+                return View(results);
             }
 
-            return View(results);
+            if (Genre.Length == 0 || Genre == null)
+            {
+                var results = bookrepo.BookWithoutGenre(Attributes);
+
+                SummaryRepo summaryRepo = new SummaryRepo();
+
+                foreach (var book in results)
+                {
+                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                }
+                return View(results);
+            }
+            else
+            {
+                var results = bookrepo.BookWithoutAttrib(Genre);
+
+                SummaryRepo summaryRepo = new SummaryRepo();
+
+                foreach (var book in results)
+                {
+                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                }
+                return View(results);
+            }
         }
     }
 
