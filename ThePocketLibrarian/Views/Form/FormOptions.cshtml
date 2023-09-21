@@ -1,108 +1,88 @@
 ﻿@{
-    Layout = "_Layout";
+    ViewData["Title"] = "Results";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <title>Bootstrap Card</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-</head>
-<body>
-    <div class="container">
-        <div class="card-columns">
-            <div class="row">
-                <div class="col-sm-6">
-                    <div class="card" style="width:250px">
-                        <div class="card-body">
-                            <h4 class="card-title">Book 1</h4>
-                            <a href="#" class="btn btn-primary stretched-link">Click for Details</a>
+<div class="container">
+    <div class="row marketing">
+        <div class="col-sm-1">
+        </div>
+        <div class="col-md-3 ">
+            <h1>Results</h1>
+            <hr>
+            <ul style="overflow:none;">
+                <li class="cardlist">
+                    <h2>Book1</h2>
+                    <div class="card">
+                        <div class="cardcontainer">
+                            <img src="../../../bookcover1.jpg" alt="Avatar" style="width:auto">
+                            @*<h4><b><a href="mailto:president@birchtreeswim.com">Jennifer Jebeles</a></b></h4>*@
+                            <p></p>
                         </div>
-                        <img class="card-img-bottom" src="../../../bookcover1.jpg" alt="Card image" style="width:200px" height="200px">
                     </div>
-                </div>
-                <div class="col-sm-6">
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4">
-
-                </div>
-                <div class="col-sm-4">
-
-                </div>
-                <div class="col-sm-4">
-
-                </div>
-            </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Vice-President</h2>
+                    <div class="card">
+                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:vicepresident@birchtreeswim.com">Open</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Treasurer</h2>
+                    <div class="card">
+                        <img src="femaleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:treasurer@birchtreeswim.com">Rebekah Crossman</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Secretary</h2>
+                    <div class="card">
+                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:secretary@birchtreeswim.com">Larry Langston</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Board Member</h2>
+                    <div class="card">
+                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">JohnMark Edwards</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Board Member</h2>
+                    <div class="card">
+                        <img src="femaleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">Dina Shunnarah</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+                <li class="cardlist">
+                    <h2>Board Member</h2>
+                    <div class="card">
+                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
+                        <div class="cardcontainer">
+                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">Ryan Mayes</a></b></h4>
+                            <p></p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="col-sm-1">
         </div>
     </div>
-</body>
-</html>
-
-    @*<div class="container">
-            <h2>Cards Columns</h2>
-            <p>The .card-columns class creates a masonry-like grid of cards. The layout will automatically adjust as you insert more cards.</p>
-            <p><strong>Note:</strong> The cards are displayed vertically on small screens (less than 576px):</p>
-            <div class="card-columns">
-                <div class="card bg-primary">
-                    <div class="card-body text-center">
-                        <p class="card-text">Some text inside the first card</p>
-                    </div>
-                    <img class="card-img-bottom" src="../../../bookcover1.jpg" alt="Card image" style="width:100%">
-                </div>
-                <div class="card bg-warning">
-                    <div class="card-body text-center">
-                        <p class="card-text">Some text inside the second card</p>
-                    </div>
-                    <img class="card-img-bottom" src="../../../bookcover2.jpg" alt="Card image" style="width:100%">
-                </div>
-                <div class="card bg-success">
-                    <div class="card-body text-center">
-                        <p class="card-text">Some text inside the third card</p>
-                    </div>
-                    <img class="card-img-bottom" src="../../../bookcover3.jpg" alt="Card image" style="width:100%">
-                </div>
-                <div class="card bg-danger">
-                    <div class="card-body text-center">
-                        <p class="card-text">Some text inside the fourth card</p>
-                    </div>
-                    <img class="card-img-bottom" src="../../../bookcover4.jpg" alt="Card image" style="width:100%">
-                </div>
-                <div class="card bg-light">
-                    <div class="card-body text-center">
-                        <p class="card-text">Some text inside the fifth card</p>
-                    </div>
-                    <img class="card-img-bottom" src="../../../bookcover5.jpg" alt="Card image" style="width:100%">
-                </div>
-            </div>
-        </div>*@
-
-
-
-@*@model IEnumerable<Book>
-    <h2 class="nextreadcaption"> YOUR NEXT READ</h2>
-
-    <table class="table">
-        <tr>
-            <th>Title</th>
-            <th>Author</th>
-            <th>Description</th>
-        </tr>
-
-        @foreach (var book in Model)
-        {
-            <tr>
-                <td>@book.Title</td>
-                <td>@book.Author</td>
-                <td>@book.Description</td>
-            </tr>
-
-        }
-    </table>*@
+</div>

@@ -34,9 +34,9 @@ namespace ThePocketLibrarian.Controllers
                 return View(results);
             }
 
-            if (Genre.Length == 0 || Genre == null)
+            if (Attributes.Length == 0 || Attributes == null)
             {
-                var results = bookrepo.BookWithoutGenre(Attributes);
+                var results = bookrepo.BookWithoutAttrib(Genre);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
@@ -46,9 +46,10 @@ namespace ThePocketLibrarian.Controllers
                 }
                 return View(results);
             }
-            else
+
+            else 
             {
-                var results = bookrepo.BookWithoutAttrib(Genre);
+                var results = bookrepo.BookWithoutGenre(Attributes);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 

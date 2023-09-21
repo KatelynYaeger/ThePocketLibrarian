@@ -1,4 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
+using System.Configuration;
 using System.Data;
 using ThePocketLibrarian;
 
@@ -11,7 +12,6 @@ builder.Services.AddScoped<IDbConnection>((s) =>
     IDbConnection conn = new MySqlConnection(builder.Configuration.GetConnectionString("BOOKBASE"));
     conn.Open();
     return conn;
-
 });
 
 builder.Services.AddTransient<IBookRepo, BookRepo>();
@@ -36,7 +36,7 @@ app.MapControllerRoute(
 
 app.Run();
 
-app.Run();
+//app.Run();
 
 
 

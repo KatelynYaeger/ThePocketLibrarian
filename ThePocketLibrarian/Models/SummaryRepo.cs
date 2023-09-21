@@ -10,7 +10,7 @@ namespace ThePocketLibrarian.Models
         {
             var client = new HttpClient();
 
-            var googleAPIKey = "GoogleApiKey";
+            //var googleAPIKey = "googleapikey";
 
             var googleURL = $"https://www.googleapis.com/books/v1/volumes?q=\"{title}\"+inauthor:{author}&key={googleAPIKey}";
 
@@ -24,4 +24,3 @@ namespace ThePocketLibrarian.Models
         } 
     }
 }
-// need to make sure something will happen if no attributes selected or no genres selected
