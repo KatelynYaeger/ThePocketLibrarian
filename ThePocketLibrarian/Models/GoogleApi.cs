@@ -5,6 +5,7 @@ namespace ThePocketLibrarian.Models
 	{
         public string GoogleAPIKey { get; set; }
         public string stuff { get; set; }
+        public string morestuff { get; set; }
 
     }
 }
