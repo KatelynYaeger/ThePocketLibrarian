@@ -39,5 +39,12 @@ namespace ThePocketLibrarian
 
             return _connection.Query<Book>(qry);
         }
+
+        public IEnumerable<Book> NoOptionsChosen()
+        {
+            string qry = string.Format("SELECT TITLE, AUTHOR FROM BOOKBASE.ATTRIBUTES order by title limit 5;");
+
+            return _connection.Query<Book>(qry);
+        }
     }
 }

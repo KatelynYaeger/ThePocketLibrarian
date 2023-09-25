@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
 using Org.BouncyCastle.Utilities;
 
@@ -10,9 +11,11 @@ namespace ThePocketLibrarian.Models
         {
             var client = new HttpClient();
 
-            //var googleAPIKey = "googleapikey";
+            var newKey = new GoogleApi();
 
-            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q=\"{title}\"+inauthor:{author}&key={googleAPIKey}";
+            var apiKey = newKey.GoogleAPIKey;
+
+            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q=\"{title}\"+inauthor:{author}&key={apiKey}";
 
             var googleResponse = client.GetStringAsync(googleURL).Result;
 

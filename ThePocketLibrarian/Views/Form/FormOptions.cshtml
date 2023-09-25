@@ -1,88 +1,31 @@
 ﻿@{
-    ViewData["Title"] = "Results";
+    Layout = "_Layout";
 }
 
-<div class="container">
-    <div class="row marketing">
-        <div class="col-sm-1">
-        </div>
-        <div class="col-md-3 ">
-            <h1>Results</h1>
-            <hr>
-            <ul style="overflow:none;">
-                <li class="cardlist">
-                    <h2>Book1</h2>
-                    <div class="card">
-                        <div class="cardcontainer">
-                            <img src="../../../bookcover1.jpg" alt="Avatar" style="width:auto">
-                            @*<h4><b><a href="mailto:president@birchtreeswim.com">Jennifer Jebeles</a></b></h4>*@
-                            <p></p>
-                        </div>
+@model IEnumerable<Book>
+
+<br />
+<div>
+    <div class="results">
+        @foreach (var book in Model)
+        {
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img src="../../bookcover1.jpg" alt="Avatar" style="width:300px;height:350px;">
                     </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Vice-President</h2>
-                    <div class="card">
-                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:vicepresident@birchtreeswim.com">Open</a></b></h4>
-                            <p></p>
-                        </div>
+                    <div class="flip-card-back">
+                        <h2>@book.Title</h2>
+                        <br />
+                        <br />
+                        <p>@book.Author</p>
+                        <p>@book.Description</p>
                     </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Treasurer</h2>
-                    <div class="card">
-                        <img src="femaleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:treasurer@birchtreeswim.com">Rebekah Crossman</a></b></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Secretary</h2>
-                    <div class="card">
-                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:secretary@birchtreeswim.com">Larry Langston</a></b></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Board Member</h2>
-                    <div class="card">
-                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">JohnMark Edwards</a></b></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Board Member</h2>
-                    <div class="card">
-                        <img src="femaleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">Dina Shunnarah</a></b></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                </li>
-                <li class="cardlist">
-                    <h2>Board Member</h2>
-                    <div class="card">
-                        <img src="maleavatar.png" alt="Avatar" style="width:100%">
-                        <div class="cardcontainer">
-                            <h4><b><a href="mailto:boardmember@birchtreeswim.com">Ryan Mayes</a></b></h4>
-                            <p></p>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="col-sm-1">
-        </div>
+                </div>
+            </div>
+        }
     </div>
 </div>
+
+
+

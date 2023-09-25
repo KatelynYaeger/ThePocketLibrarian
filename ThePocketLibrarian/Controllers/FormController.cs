@@ -21,14 +21,27 @@ namespace ThePocketLibrarian.Controllers
         [HttpPost]
         public IActionResult FormOptions(string[] Genre, string[] Attributes)
         {
-            if (Genre.Length != 0 && Genre != null && Attributes.Length != 0 && Attributes != null)
-            {
-                var results = bookrepo.GetTheRightBook(Genre, Attributes);
+            if (Genre.Length == 0 || Genre is null && Attributes.Length == 0 || Attributes is null)
+                {
+                var results = bookrepo.NoOptionsChosen();
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
-                foreach(var book in results)
-                { 
+                foreach (var book in results)
+                {
+                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                }
+                return View(results);
+                }
+
+            if (Genre.Length == 0 || Genre == null)
+            {
+                var results = bookrepo.BookWithoutGenre(Attributes);
+
+                SummaryRepo summaryRepo = new SummaryRepo();
+
+                foreach (var book in results)
+                {
                     book.Description = summaryRepo.GetSummary(book.Title, book.Author);
                 }
                 return View(results);
@@ -47,14 +60,14 @@ namespace ThePocketLibrarian.Controllers
                 return View(results);
             }
 
-            else 
+            else
             {
-                var results = bookrepo.BookWithoutGenre(Attributes);
+                var results = bookrepo.GetTheRightBook(Genre, Attributes);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
-                foreach (var book in results)
-                {
+                foreach(var book in results)
+                { 
                     book.Description = summaryRepo.GetSummary(book.Title, book.Author);
                 }
                 return View(results);
@@ -63,22 +76,4 @@ namespace ThePocketLibrarian.Controllers
     }
 
 }
-
-//
-
-//Need to :
-//- Use title and authorname pulled from database to get summary from API
-//- Return the title/author/summary in View.
-
-////foreach (var attrib in attributes)
-//{
-// 
-//}
-
-//Full-Text Search Statement
-//SELECT TITLE, AUTHOR, MATCH(CHARACTERISTICS)
-//AGAINST(characteristics[i]) 
-//AS SCORES FROM BOOKBASE.ATTRIBUTES
-//WHERE GENRE = "genre[i]"
-//ORDER BY scores DESC;
 
