@@ -7,7 +7,7 @@ namespace ThePocketLibrarian.Models
 {
 	public class SummaryRepo: ISummaryRepo
 	{
-        public string GetSummary(string title, string author)
+        public string GetSummary(string ISBN, string Title, string Author)
         {
             var client = new HttpClient();
 
@@ -15,7 +15,7 @@ namespace ThePocketLibrarian.Models
 
             var apiKey = newKey.GoogleAPIKey;
 
-            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q=\"{title}\"+inauthor:{author}&key={apiKey}";
+            var googleURL = $"https://www.googleapis.com/books/v1/volumes?q={Title}+inauthor:{Author}+isbn:{ISBN}&key={apiKey}";
 
             var googleResponse = client.GetStringAsync(googleURL).Result;
 

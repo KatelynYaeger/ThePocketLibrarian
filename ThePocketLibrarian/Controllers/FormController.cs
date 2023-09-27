@@ -29,7 +29,7 @@ namespace ThePocketLibrarian.Controllers
 
                 foreach (var book in results)
                 {
-                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                    book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
                 }
                 return View(results);
                 }
@@ -42,7 +42,7 @@ namespace ThePocketLibrarian.Controllers
 
                 foreach (var book in results)
                 {
-                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                    book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
                 }
                 return View(results);
             }
@@ -55,7 +55,7 @@ namespace ThePocketLibrarian.Controllers
 
                 foreach (var book in results)
                 {
-                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                    book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
                 }
                 return View(results);
             }
@@ -68,7 +68,7 @@ namespace ThePocketLibrarian.Controllers
 
                 foreach(var book in results)
                 { 
-                    book.Description = summaryRepo.GetSummary(book.Title, book.Author);
+                    book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
                 }
                 return View(results);
             }

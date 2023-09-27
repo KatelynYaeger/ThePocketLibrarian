@@ -12,6 +12,7 @@ namespace ThePocketLibrarian
         public string Author { get; set; }
         public string Genre { get; set; }
         public string Characteristics { get; set; }
+        public string ISBN { get; set; }
         public string Description { get; set; }
     }
 }
