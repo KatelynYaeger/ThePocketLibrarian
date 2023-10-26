@@ -1,8 +1,11 @@
 ﻿using System.Data.Common;
 using System.Globalization;
 using System.Text;
+using Microsoft.AspNetCore.Builder.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 using Org.BouncyCastle.Asn1.Cms;
 using ThePocketLibrarian;
 using ThePocketLibrarian.Models;
@@ -30,6 +33,7 @@ namespace ThePocketLibrarian.Controllers
                 foreach (var book in results)
                 {
                     book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
+                        
                 }
                 return View(results);
                 }
@@ -66,7 +70,7 @@ namespace ThePocketLibrarian.Controllers
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
-                foreach(var book in results)
+                foreach (var book in results)
                 { 
                     book.Description = summaryRepo.GetSummary(book.ISBN, book.Title, book.Author);
                 }
