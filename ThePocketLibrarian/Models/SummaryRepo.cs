@@ -1,29 +1,13 @@
-﻿using System;
-using Microsoft.AspNetCore.DataProtection.KeyManagement;
-using Microsoft.Extensions.Options;
+﻿using Microsoft.Extensions.Options;
 using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Utilities;
-using System.Configuration;
 
 namespace ThePocketLibrarian.Models
 {
     public class SummaryRepo : ISummaryRepo
-    { 
+    {
         public string GetSummary(string ISBN, string Title, string Author)
         {
-            var config = new ConfigurationBuilder()
-                 .SetBasePath(Directory.GetCurrentDirectory())
-                 .AddJsonFile("appsettings.json")
-                 .Build();
-
-            var services = new ServiceCollection()
-               .AddOptions()
-               .Configure<GoogleApi>(config.GetSection("GoogleApi"))
-               .BuildServiceProvider();
-
-            var apiSettings = services.GetService<IOptions<GoogleApi>>();
-
-            var apiKey = apiSettings.Value.GoogleAPIKey;
+            var apiKey = apikey;
 
             var client = new HttpClient();
 
@@ -36,6 +20,30 @@ namespace ThePocketLibrarian.Models
             Summary result = googleObject.ToObject(typeof(Summary)) as Summary;
 
             return result.items[0].volumeInfo.description;
+        }
+        private static string _apikey = null;
+        public static string apikey
+        {
+            get
+            {
+                if (_apikey == null)
+                {
+                    var config = new ConfigurationBuilder()
+                      .SetBasePath(Directory.GetCurrentDirectory())
+                      .AddJsonFile("appsettings.json")
+                      .Build();
+
+                    var services = new ServiceCollection()
+                       .AddOptions()
+                       .Configure<GoogleApi>(config.GetSection("GoogleApi"))
+                       .BuildServiceProvider();
+
+                    var apiSettings = services.GetService<IOptions<GoogleApi>>();
+
+                    _apikey = apiSettings.Value.GoogleAPIKey;
+                }
+                return _apikey;
+            }
         }
     }
 }

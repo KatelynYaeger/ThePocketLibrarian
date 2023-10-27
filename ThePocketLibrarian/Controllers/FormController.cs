@@ -1,13 +1,4 @@
-﻿using System.Data.Common;
-using System.Globalization;
-using System.Text;
-using Microsoft.AspNetCore.Builder.Extensions;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Options;
-using Newtonsoft.Json.Linq;
-using Org.BouncyCastle.Asn1.Cms;
-using ThePocketLibrarian;
+﻿using Microsoft.AspNetCore.Mvc;
 using ThePocketLibrarian.Models;
 
 namespace ThePocketLibrarian.Controllers

@@ -5,6 +5,7 @@ using ThePocketLibrarian;
 using ThePocketLibrarian.Models;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Newtonsoft.Json.Linq;
 
 var builder = WebApplication.CreateBuilder(args);
 
