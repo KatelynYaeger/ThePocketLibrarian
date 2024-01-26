@@ -1,7 +1,4 @@
-﻿using System;
-using Org.BouncyCastle.Utilities;
-
-namespace ThePocketLibrarian.Models
+﻿namespace ThePocketLibrarian.Models
 {
 	public class Summary
     {

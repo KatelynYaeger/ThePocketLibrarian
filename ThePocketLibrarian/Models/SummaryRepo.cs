@@ -21,7 +21,9 @@ namespace ThePocketLibrarian.Models
 
             return result.items[0].volumeInfo.description;
         }
+
         private static string _apikey = null;
+
         public static string apikey
         {
             get

@@ -1,6 +1,4 @@
-﻿using Newtonsoft.Json.Linq;
-
-namespace ThePocketLibrarian
+﻿namespace ThePocketLibrarian
 {
     public class Book
     {

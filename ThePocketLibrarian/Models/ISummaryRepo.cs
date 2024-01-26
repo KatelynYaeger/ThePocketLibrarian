@@ -1,5 +1,4 @@
-﻿using System;
-namespace ThePocketLibrarian.Models
+﻿namespace ThePocketLibrarian.Models
 {
 	public interface ISummaryRepo
 	{

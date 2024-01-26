@@ -1,7 +1,4 @@
-﻿using System;
-using Newtonsoft.Json.Linq;
-
-namespace ThePocketLibrarian
+﻿namespace ThePocketLibrarian
 {
     public interface IBookRepo
     {

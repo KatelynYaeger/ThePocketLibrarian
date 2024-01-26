@@ -19,10 +19,4 @@
   <ItemGroup>
     <Folder Include="Views\Form\" />
   </ItemGroup>
-  <ItemGroup>
-    <Content Remove="wwwroot\Picture3.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="wwwroot\Picture3.jpg" />
-  </ItemGroup>
 </Project>
