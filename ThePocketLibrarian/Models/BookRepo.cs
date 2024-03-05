@@ -14,7 +14,7 @@ namespace ThePocketLibrarian
             _connection = connection;
         }
 
-        public IEnumerable<Book> GetTheRightBook(string[] Genre, string[] Attributes)
+        public IEnumerable<Book> GetBookWithGenreAndAttrib(string[] Genre, string[] Attributes)
         {
             var attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "' '" + n) + "')";
             var genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
@@ -24,7 +24,7 @@ namespace ThePocketLibrarian
             return _connection.Query<Book>(qry);
         }
 
-        public IEnumerable<Book> BookWithoutGenre(string[] Attributes)
+        public IEnumerable<Book> GetBookWithoutGenre(string[] Attributes)
         {
             var attribString = "MATCH(CHARACTERISTICS) against ('" + Attributes.Aggregate((p, n) => p + "' '" + n) + "')";
 
@@ -34,7 +34,7 @@ namespace ThePocketLibrarian
             return _connection.Query<Book>(qry);
         }
 
-        public IEnumerable<Book> BookWithoutAttrib(string[] Genre)
+        public IEnumerable<Book> GetBookWithoutAttrib(string[] Genre)
         {
             var genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
 
@@ -43,7 +43,7 @@ namespace ThePocketLibrarian
             return _connection.Query<Book>(qry);
         }
 
-        public IEnumerable<Book> NoOptionsChosen()
+        public IEnumerable<Book> GetBookWithNoOptionsChosen()
         {
             string qry = string.Format("SELECT TITLE, AUTHOR, ISBN FROM BOOKBASE.ATTRIBUTES order by RAND() limit 5;");
 

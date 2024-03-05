@@ -2,10 +2,10 @@
 {
     public interface IBookRepo
     {
-        IEnumerable<Book> GetTheRightBook(string[] Genre, string[] Attributes);
-        IEnumerable<Book> BookWithoutAttrib(string[] Genre);
-        IEnumerable<Book> BookWithoutGenre(string[] Attributes);
-        IEnumerable<Book> NoOptionsChosen();
+        IEnumerable<Book> GetBookWithGenreAndAttrib(string[] Genre, string[] Attributes);
+        IEnumerable<Book> GetBookWithoutAttrib(string[] Genre);
+        IEnumerable<Book> GetBookWithoutGenre(string[] Attributes);
+        IEnumerable<Book> GetBookWithNoOptionsChosen();
 
     }
 }

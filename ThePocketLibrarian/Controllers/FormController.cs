@@ -17,7 +17,7 @@ namespace ThePocketLibrarian.Controllers
         {
             if (Genre.Length == 0 || Genre is null && Attributes.Length == 0 || Attributes is null)
                 {
-                var results = bookrepo.NoOptionsChosen();
+                var results = bookrepo.GetBookWithNoOptionsChosen();
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
@@ -31,7 +31,7 @@ namespace ThePocketLibrarian.Controllers
 
             if (Genre.Length == 0 || Genre == null)
             {
-                var results = bookrepo.BookWithoutGenre(Attributes);
+                var results = bookrepo.GetBookWithoutGenre(Attributes);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
@@ -44,7 +44,7 @@ namespace ThePocketLibrarian.Controllers
 
             if (Attributes.Length == 0 || Attributes == null)
             {
-                var results = bookrepo.BookWithoutAttrib(Genre);
+                var results = bookrepo.GetBookWithoutAttrib(Genre);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
@@ -57,7 +57,7 @@ namespace ThePocketLibrarian.Controllers
 
             else
             {
-                var results = bookrepo.GetTheRightBook(Genre, Attributes);
+                var results = bookrepo.GetBookWithGenreAndAttrib(Genre, Attributes);
 
                 SummaryRepo summaryRepo = new SummaryRepo();
 
