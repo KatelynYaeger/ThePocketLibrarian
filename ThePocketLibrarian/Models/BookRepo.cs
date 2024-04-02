@@ -38,14 +38,14 @@ namespace ThePocketLibrarian
         {
             var genreString = "genre in ('" + Genre.Aggregate((p, n) => p + "','" + n) + "')";
 
-            string qry = string.Format("SELECT TITLE, AUTHOR, ISBN, LINK, FROM BOOKBASE.ATTRIBUTES where {0} order by RAND() LIMIT 5;", genreString);
+            string qry = string.Format("SELECT TITLE, AUTHOR, ISBN, LINK FROM BOOKBASE.ATTRIBUTES where {0} order by RAND() LIMIT 5;", genreString);
 
             return _connection.Query<Book>(qry);
         }
 
         public IEnumerable<Book> GetBookWithNoOptionsChosen()
         {
-            string qry = string.Format("SELECT TITLE, AUTHOR, ISBN, LINK, FROM BOOKBASE.ATTRIBUTES order by RAND() limit 5;");
+            string qry = string.Format("SELECT TITLE, AUTHOR, ISBN, LINK FROM BOOKBASE.ATTRIBUTES order by RAND() limit 5;");
 
             return _connection.Query<Book>(qry);
         }
