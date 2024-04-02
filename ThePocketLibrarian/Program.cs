@@ -1,6 +1,7 @@
 ﻿using MySql.Data.MySqlClient;
 using System.Data;
 using ThePocketLibrarian;
+using ThePocketLibrarian.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ builder.Services.AddScoped<IDbConnection>((s) =>
 });
 
 builder.Services.AddTransient<IBookRepo, BookRepo>();
+builder.Services.AddTransient<ISummaryRepo, SummaryRepo>();
 
 var app = builder.Build();
 

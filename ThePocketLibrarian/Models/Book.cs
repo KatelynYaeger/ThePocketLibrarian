@@ -12,5 +12,6 @@
         public string Characteristics { get; set; }
         public string ISBN { get; set; }
         public string Description { get; set; }
+        public string Link { get; set; }
     }
 }
